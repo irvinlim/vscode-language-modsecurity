@@ -4,7 +4,7 @@ This extension adds language support for ModSecurity configuration files to [Vis
 
 The language syntax was based off the one from the Sublime Text package [lifeforms/sublime-modsecurity](https://github.com/lifeforms/sublime-modsecurity).
 
-![](https://github.com/irvinlim/vscode-language-modsecurity/raw/master/example.png)
+![](https://github.com/irvinlim/vscode-language-modsecurity/raw/master/images/example.png)
 
 ## License
 

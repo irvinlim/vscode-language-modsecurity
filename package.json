@@ -26,5 +26,6 @@
             "scopeName": "source.modsecurity",
             "path": "./syntaxes/modsecurity.tmLanguage"
         }]
-    }
+    },
+    "icon": "images/icon.png"
 }
