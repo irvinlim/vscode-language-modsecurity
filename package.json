@@ -1,0 +1,26 @@
+{
+    "name": "language-modsecurity",
+    "displayName": "ModSecurity Syntax Highlighting",
+    "description": "Syntax support for ModSecurity",
+    "version": "0.0.1",
+    "publisher": "irvinlim",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "modsecurity",
+            "aliases": ["ModSecurity", "modsecurity"],
+            "extensions": [".conf"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "modsecurity",
+            "scopeName": "source.modsecurity",
+            "path": "./syntaxes/modsecurity.tmLanguage"
+        }]
+    }
+}
