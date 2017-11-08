@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>fileTypes</key>
-	<array>
-		<string>conf</string>
-	</array>
 	<key>name</key>
 	<string>ModSecurity</string>
 	<key>patterns</key>
@@ -87,12 +83,12 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.modsecurity.action.ctl</string>
+					<string>keyword.operator.modsecurity.action.ctl</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.modsecurity.action.ctl.name</string>
+					<string>keyword.operator.modsecurity.action.ctl.name</string>
 				</dict>
 				<key>5</key>
 				<dict>
@@ -123,7 +119,7 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>constant.language.modsecurity.action.transform_name</string>
+					<string>constant.numeric.modsecurity.action.transform_name</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -144,7 +140,7 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>constant.language.modsecurity.action.phase_name</string>
+					<string>constant.numeric.modsecurity.action.phase_name</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -165,7 +161,7 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>constant.language.modsecurity.action.severity_name</string>
+					<string>constant.numeric.modsecurity.action.severity_name</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -181,7 +177,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.modsecurity.action</string>
+					<string>keyword.operator.modsecurity.action</string>
 				</dict>
 				<key>4</key>
 				<dict>
@@ -207,7 +203,7 @@
 			<key>comment</key>
 			<string>Rule action - with parameter</string>
 			<key>match</key>
-			<string>(?i)(^|,|\"|\s)(accuracy|append|deprecatevar|exec|expirevar|id|initcol|logdata|maturity|msg|pause|prepend|rev|sanitiseArg|sanitiseMatched|sanitiseMatchedBytes|sanitiseRequestHeader|sanitiseResponseHeader|setuid|setrsc|setsid|setenv|skip|skipAfter|status|tag|ver|xmlns):('(\d+)'|(\d+)|'([\w\s:\.\-_/\(\),]+)'|([\w\s:\.\-_/\(\)]+))</string>
+			<string>(?i)(^|,|\"|\s)(accuracy|append|deprecatevar|exec|expirevar|id|initcol|logdata|maturity|msg|pause|prepend|rev|sanitiseArg|sanitiseMatched|sanitiseMatchedBytes|sanitiseRequestHeader|sanitiseResponseHeader|setuid|setrsc|setsid|setenv|setvar|skip|skipAfter|status|tag|ver|xmlns):('(\d+)'|(\d+)|('[\w\s:\.\-_/\(\),]+')|([\w\s:\.\-_/\(\)]+))</string>
 			<key>name</key>
 			<string>complex.modsecurity.action.with_parameter</string>
 		</dict>
@@ -217,7 +213,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.modsecurity.action</string>
+					<string>keyword.operator.modsecurity.action</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -265,7 +261,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other.modsecurity.action</string>
+					<string>keyword.operator.modsecurity.action</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -281,7 +277,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.modsecurity</string>
+					<string>keyword.control.modsecurity</string>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -323,7 +319,7 @@
 			<key>match</key>
 			<string>(?i)@(beginsWith|contains|containsWord|detectSQLi|detectXSS|endsWith|fuzzyHash|eq|ge|geoLookup|gsbLookup|gt|inspectFile|ipMatch|ipMatchF|ipMatchFromFile|le|lt|noMatch|pmf|pmFromFile|rbl|rsub|streq|strmatch|unconditionalMatch|validateByteRange|validateDTD|validateHash|validateSchema|validateUrlEncoding|validateUtf8Encoding|verifyCC|verifyCPF|verifySSN|within)\b</string>
 			<key>name</key>
-			<string>keyword.operator.modsecurity</string>
+			<string>keyword.control.modsecurity</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -337,7 +333,7 @@
 			<key>comment</key>
 			<string>Implicit regexp operator by double-quoted string, e.g. "foo"</string>
 			<key>match</key>
-			<string>(?i)"([^@][^"]*)</string>
+			<string>(?i)"([^@][^"]*)"</string>
 			<key>name</key>
 			<string>complex.modsecurity.operator_operand.rx.implicit</string>
 		</dict>
