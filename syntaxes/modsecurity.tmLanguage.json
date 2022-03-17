@@ -175,20 +175,20 @@
         }
       },
       "comment": "Regexp operator and operand, e.g. \"@rx foo\"",
-      "match": "(?i)\"(@rx)\\s+((?:[^\"\\\\]|\\\\.)*)\"",
+      "match": "(?i)\"(!?@rx)\\s+((?:[^\"\\\\]|\\\\.)*)\"",
       "name": "complex.modsecurity.operator_operand.rx"
     },
     {
       "captures": {
         "1": {
-          "name": "keyword.operator.modsecurity"
+          "name": "keyword.control.modsecurity"
         },
         "2": {
           "name": "string.unquoted.modsecurity"
         }
       },
       "comment": "pm operator and operand, e.g. \"@pm foo\"",
-      "match": "(?i)\"(@pm)\\s+([^\"]*)",
+      "match": "(?i)\"(!?@pm)\\s+((?:[^\"\\\\]|\\\\.)*)\"",
       "name": "complex.modsecurity.operator_operand.pm"
     },
     {
@@ -203,7 +203,7 @@
         }
       },
       "comment": "Implicit regexp operator by double-quoted string, e.g. \"foo\"",
-      "match": "(?i)\"([^@][^\"]*)\"",
+      "match": "(?i)\"([^@](?:[^\"\\\\]|\\\\.)*)\"",
       "name": "complex.modsecurity.operator_operand.rx.implicit"
     },
     {
